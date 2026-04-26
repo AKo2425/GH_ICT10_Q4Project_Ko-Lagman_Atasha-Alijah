@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
+
+<!-- PyScript -->
+<link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+<script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+<title>Project</title>
+
+<style>
+body {
+    background-color: #140932;
+    color: #f1f0fd;
+    font-family: "Kumbh Sans", sans-serif;
+    text-align: center;
+    padding: 20px;
+    padding-top: 100px; 
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    background: linear-gradient(90deg, #292551 0%, #231c51 100%);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.nav-title {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: rgba(27,27,27,0.6);
+}
+
+.nav-links a:hover {
+    background-color: #a9a3ff;
+    color: #111;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #eee;
+    color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+.card p {
+    margin: 0 10px 10px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <span class="nav-title">10-Sapphire</span>
+    <div class="nav-links">
+        <a href="index.html">Classmates</a>
+        <a href="attendance.html">Attendance Tracker</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+</nav>
+
+<h1>Highlights of Our 10-Sapphire Journey</h1>
+
+<div id="gallery"></div>
+
+<py-script src="gallery.py"></py-script>
+
+</body>
+</html>

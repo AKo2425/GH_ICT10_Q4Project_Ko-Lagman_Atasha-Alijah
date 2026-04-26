@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <title>Project</title>
+        <py-config>
+        packages = ['numpy','matplotlib']
+    </py-config>
+<style>
+body {
+    background-color: #140932;
+    color: #f1f0fd;
+    font-family: "Kumbh Sans", sans-serif;
+    text-align: center;
+    padding: 20px;
+    padding-top: 90px; 
+}
+
+h1 {
+    font-size: 30px;
+}
+.container {
+    padding: 30px 35px;
+    display: flex;
+    gap: 40px;
+}
+
+.left-panel {
+    background: rgba(164, 165, 216, 0.874);
+    color:#2d2c4e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.right-panel {
+    flex-grow: 1;
+    background: rgba(164, 165, 216, 0.874);
+    color:#2d2c4e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    background: linear-gradient(90deg, #292551 0%, #231c51 100%);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+.nav-title {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    white-space: nowrap;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: rgba(27,27,27,0.6);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+<nav>
+    <span class="nav-title">10-Sapphire</span>
+    <div class="nav-links">
+        <a href="index.html">Classmates</a>
+        <a href="attendance.html">Attendance Tracker</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+</nav>
+<h1>Attendance Tracker</h1>
+<div class="container">
+
+    <div class="left-panel">
+        <label for="day">Select Day:</label>
+        <select id="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+        </select>
+
+        <br><br>
+
+        <label for="absence">Number of Absences:</label>
+        <input type="number" id="absence" min="0">
+
+        <br><br>
+
+        <button py-click="add_data">Add Data</button>
+        <button py-click="show_graph">Show Graph</button>
+
+        <div id="log"></div>
+    </div>
+
+    <div class="right-panel">
+        <div id="graph"></div>
+    </div>
+
+</div>
+<py-script src="attendance.py"></py-script>
+</body>
+</html>
