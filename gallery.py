@@ -1,9 +1,9 @@
 from pyscript import document
 
 photos = [
-    {"name": "Class Fun", "desc": "Will miss!", "img": "classfun.jpg"}, 
-    {"name": "Intramurals", "desc": "Green Hornets!", "img": "intrams.jpg"}, 
-    {"name": "Food Fair", "desc": "Basketball and prices!", "img": "foodfair.jpg"}, 
+    {"name": "Class Fun", "desc": "Will miss!", "img": "classfun.JPG"}, 
+    {"name": "Intramurals", "desc": "Green Hornets!", "img": "intrams.JPG"}, 
+    {"name": "Food Fair", "desc": "Basketball and prices!", "img": "foodfair.JPG"}, 
     {"name": "CAT Graduation", "desc": "Finally graduated!", "img": "CAT Graduation.jpeg"}, 
 ]
 
